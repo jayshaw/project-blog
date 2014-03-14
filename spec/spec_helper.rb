@@ -3,4 +3,4 @@ ENV['RACK_ENV'] = 'test'
 require_relative '../app/main'
 
 require 'capybara/rspec'
-Capybara.app = travelblog
+Capybara.app = TravelBlog
