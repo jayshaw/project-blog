@@ -3,20 +3,19 @@ require 'active_record'
 require 'sinatra'
 require 'sinatra/reloader'
 
-require_relative './functions'
+require_relative './functions.rb'
 
 class TravelBlog < Sinatra::Base
   get "/" do
-    @visits = Visit.all  
     erb :home
   end
   
   get "/australia" do
-    erb :australia
+    erb :australia_trip
   end
   
   get "/new_zealand" do
-    erb :new_zealand
+    erb :new_zealand_trip
   end
   
   get "/thailand" do
