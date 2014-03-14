@@ -21,3 +21,17 @@ ActiveRecord::Schema.define do
     end
   end
 end
+
+class Visits < ActiveRecord::Base
+  # name - string
+  # description - string
+  
+  has_many :comments
+  # 1. There is a table called "friends".
+  # 2. That table has a foreign_key that refers to this table.
+  # 3. That foreign_key is called "this_table_singular_id". ("user_id")
+  # 4. There may be many rows in that table that refer to one row in this table.
+  
+  # Now...
+  # @user.friends returns an Array of Friend objects.
+end
