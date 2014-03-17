@@ -1,7 +1,7 @@
 # This creates the database (if it doesn't already exist).
 ActiveRecord::Base.establish_connection(
   :adapter  => 'sqlite3',
-  :database => (ENV['RACK_ENV'] == "test") ? "travelblog.test" : "travelblog"
+  :database => (ENV['RACK_ENV'] == "test") ? "WorldTravel.test" : "WorldTravel"
 )
 
 ActiveRecord::Base.logger = Logger.new(STDERR)
@@ -12,8 +12,6 @@ ActiveRecord::Schema.define do
       table.column :country, :string
       table.column :image, :string
       table.column :article_h, :string
-      table.column :article_b, :string
-      table.column :wiki_h, :string
       table.column :article_b, :string
     end
   end

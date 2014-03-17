@@ -1,3 +1,3 @@
 require './app/main'
 
-run TravelBlog
+run WorldTravel
